@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/registro.css' %}">
+    <link rel="Shortcut Icon" href="{% static 'core/img/logo.ico' %}" type="image/x-icon" />
+</head>
+
+<body>
+    <main>
+        <img class="wave" src="{% static 'core/img/wave.png' %}">
+        <div class="login-content">
+            <img src="{% static 'core/img/avatar.svg' %}">
+            <h2 class="title">Registro</h2>
+        </div>
+
+        <form action="post" class="formulario" id="formulario">
+            {% csrf_token %} 
+            
+            {{form.as_table}}
+
+            <imput type="submit" class="btn btn-success" id="enviar" value="enviar">enviar</imput>
+        </form>
+
+        <div class="alert alert-success" role="alert">
+            {{mensaje}}
+        </div>
+    </main>
+
+    <script src="{% static 'core/js/registro.js' %}"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href=" {% static 'core/css/nosotros.css' %} ">
+    <link rel="stylesheet" href=" {% static 'core/css/font-awesome.min.css' %} ">
+    <link rel="Shortcut Icon" href=" {% static 'core/img/logo.ico' %} " type="image/x-icon" />
+</head>
+
+<body>
+
+    <section class="nosotros">
+        <div class="titulo-seccion">
+            <h2>Nosotros</h2>
+            <p> Especialistas en entregar los mejores trabajos y la más alta calidad</p>
+
+            <div class="cont-nos">
+                <div class="foto">
+                </div>
+                <div class="texto">
+                    <p>Estamos en el negocio de entregar soluciones consistentes y eficientes a sus necesidades de mantencion, reparacion y diganostico de su vehiculo particular o flota. nuestros tecnicos especialistas y equipo de atencion al cliente reafirman
+                        día a día el compromiso de entregar nada menos que la excelencia en servicio y la mejor experiencia en resolución de problemas. nuestro secreto es el foco absoluto en el servicio al cliente, soporte y garantia.</p>
+                </div>
+
+            </div>
+    </section>
+
+    <hr>
+
+    <section class="nuestros-trabajadores" id="trabajadores">
+        <div class="contenedor" id="cont">
+            <div class="titulo-seccion">
+                <h2>Nuestros Trabajadores</h2>
+                <p>Especialistas que trabajan en nuestro taller</p>
+            </div>
+            <div class="trabajadores">
+                <div class="trabajador">
+                    <div class="foto">
+                        <img src=" {% static 'core/img/mecanico1.jpg' %} " alt="Persona">
+                    </div>
+                    <div class="texto">
+                        <h3>Victor Gonzalez</h3>
+                        <h4>Electrónica automotriz</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                    </div>
+                </div>
+                <div class="trabajador">
+                    <div class="foto">
+                        <img src="{% static 'core/img/mecanico2.jpg' %}" alt="Persona">
+                    </div>
+                    <div class="texto">
+                        <h3>Patricio Jara</h3>
+                        <h4>Cajas de cambio</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                    </div>
+                </div>
+                <div class="trabajador">
+                    <div class="foto">
+                        <img src="{% static 'core/img/mecanico3.jpeg' %}" alt="Persona">
+                    </div>
+                    <div class="texto">
+                        <h3>Manuel Bravo</h3>
+                        <h4>Suspensión y dirección</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <header class="header">
+            <div class="container">
+                <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                </div>
+                <div class="logo">
+                    <h1>Logotipo</h1>
+                </div>
+                <nav class="menu">
+                    <a href="{% url 'index' %}">Inicio</a>
+                    <a href="{% url 'nosotros' %}">Nosotros</a>
+                    <a href="{% url 'servicios' %}">Servicios</a>
+                    <a href="{% url 'contacto' %}">Contacto</a>
+                </nav>
+            </div>
+        </header>
+        <div class="capa"></div>
+
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="{% url 'inicio' %}">iniciar sesion</a>
+                    <a href="{% url 'registro' %}">Registrarte</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+    /*  width: 100%;*/
+    background: url(https://www.xtrafondos.com/wallpapers/lamborghini-gallardo-tikore-1647.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.capa {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+
+/*Estilos para el encabezado*/
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container .btn-menu,
+.logo {
+    float: left;
+    line-height: 100px;
+}
+
+.container .btn-menu label {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+
+/*Fin de Estilos para el encabezado*/
+
+
+/*Menù lateral*/
+
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/*Fin de Menù lateral*/
+
+
+/*Formato a los titulos*/
+
+.titulo-seccion {
+    margin-top: 10rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    color: #f9cd16;
+    font-size: 3.125rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.titulo-seccion p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/*Fin formato de titulos*/
+
+
+/*Forma a slider*/
+
+.contenedor-slider {
+    width: 100%;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: 54px 0;
+    position: relative;
+}
+
+.contenedor-slider .slider {
+    width: 400%;
+    display: flex;
+}
+
+.contenedor-slider .slider .slide {
+    width: 15%;
+    max-width: 700px;
+    margin-right: 0.5%;
+    box-shadow: 1px 15px 30px graY;
+}
+
+.contenedor-slider .slider .slide img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.contenedor-slider .btn-anterior,
+.contenedor-slider .btn-siguiente {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contenedor-slider .btn-anterior {
+    left: 2%;
+}
+
+.contenedor-slider .btn-siguiente {
+    right: 2%;
+}
+
+.contenedor-slider .btn-anterior i,
+.contenedor-slider .btn-siguiente i {
+    color: #f9cd16;
+}
+
+.contenedor-slider .btn-anterior i:hover,
+.contenedor-slider .btn-siguiente i:hover {
+    color: #58606d;
+}
+
+
+/*-----Footer---------*/

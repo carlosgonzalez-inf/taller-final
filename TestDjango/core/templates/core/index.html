@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Mecanica mcqueen</title>
+    <link rel="stylesheet" href=" {% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href=" {% static 'core/css/font-awesome.min.css' %} ">
+    <link rel="Shortcut Icon" href=" {% static 'core/img/logo.ico' %}" type="image/x-icon" />
+</head>
+
+<body>
+
+
+    <div class="titulo-seccion">
+        <h2>Ultimos trabajos</h2>
+        <p>Calidad y excelencia en cada trabajo</p>
+    </div>
+
+    <section class="contenedor-slider">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src=" {% static 'core/img/carrucel1.jpg' %}" alt="Slide">
+            </div>
+            <div class="slide">
+                <img src="{% static 'core/img/carrucel2.jpg' %}" alt="Slide">
+            </div>
+            <div class="slide">
+                <img src="{% static 'core/img/carrucel3.jpg' %}" alt="Slide">
+            </div>
+            <div class="slide">
+                <img src="{% static 'core/img/carrucel4.jpg' %}" alt="Slide">
+            </div>
+        </div>
+        <div class="btn-anterior" id="btnAnterior">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
+        <div class="btn-siguiente" id="btnSiguiente">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+    </section>
+
+    <script src=" {% static 'core/js/jquery.min.js' %}"></script>
+    <script src=" {% static 'core/js/slider.js' %}"></script>
+
+    <section>
+        <header class="header">
+            <div class="container">
+                <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                </div>
+                <div class="logo">
+                    <h1>Logotipo</h1>
+                </div>
+                <nav class="menu">
+                    <a href="{% url 'index' %}">Inicio</a>
+                    <a href="{% url 'nosotros' %}">Nosotros</a>
+                    <a href="{% url 'servicios' %}">Servicios</a>
+                    <a href="{% url 'contacto' %} ">Contacto</a>
+                </nav>
+            </div>
+        </header>
+        <div class="capa"></div>
+        
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="{% url 'inicio' %}">iniciar sesion</a>
+                    <a href="{% url 'registro' %}">Registrarte</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>

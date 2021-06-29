@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <title>Formulario de contacto</title>
+    <link rel="Shortcut Icon" href="{% static 'core/img/logo.ico' %} " type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'core/css/contacto.css'%}">
+</head>
+
+<body>
+    <img class="wave" src="{% static 'core/img/wave.png'%}">
+    <section>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Logotipo</h1>
+                </div>
+                <nav class="menu">
+                    <a href="{% url 'index' %}">Inicio</a>
+                    <a href="{% url 'nosotros' %}">Nosotros</a>
+                    <a href="{% url 'servicios' %}">Servicios</a>
+                    <a href="{% url 'contacto' %} ">Contacto</a>
+                </nav>
+            </div>
+        </header>
+        <div class="contenedor">
+
+            <h1>Formulario Contacto</h1>
+
+            <div class="contenido">
+
+                <div class="info">
+
+                    <div class="col">
+                        <i class="icono fas fa-map-marker-alt"></i>
+                        <p>Av. 26 de julio Nro. 8 Ciudad - País</p>
+                    </div>
+
+                    <div class="col">
+                        <i class="icono fas fa-envelope"></i>
+                        <p>consulta@correo.com</p>
+                    </div>
+
+                    <div class="col">
+                        <i class="icono fas fa-phone"></i>
+                        <p>(01) 6262-222 <br> (01) 3343-543</p>
+                    </div>
+
+                    <div class="redes-s">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+                {% block content %}
+                <form action="#" method="post" class="formulario">
+                    {% csrf_token %} 
+                    {{form.as_table}}
+                    <acronym title="Enviar mensaje">
+                        <button type="submit" onclick="validarFormulario()">Enviar</button></acronym>
+                </form>
+                {% endblock %}
+
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="{% static  'core/js/contacto.js'%}"></script>
+</body>
+
+</html>
